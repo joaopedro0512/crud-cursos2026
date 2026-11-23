@@ -1,0 +1,26 @@
+{
+  "name": "crud-cursos2026",
+  "version": "1.0.0",
+  "description": "crud feito para criar uma tabela de cursos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopedro0512/crud-cursos2026.git"
+  },
+  "keywords": [],
+  "author": "João Pedro Fernandes Pereira Abreu",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/joaopedro0512/crud-cursos2026/issues"
+  },
+  "homepage": "https://github.com/joaopedro0512/crud-cursos2026#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "sqlite3": "^6.0.1"
+  }
+}
