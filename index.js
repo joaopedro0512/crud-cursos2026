@@ -1,5 +1,5 @@
 import express from "express";
-import cursosRoute from "./src/route/cursos.route.js";
+import cursosRoute from "./src/routes/cursos.routes.js";
 
 const app = express();
 app.use(express.json());

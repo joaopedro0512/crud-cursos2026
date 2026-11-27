@@ -1,20 +1,24 @@
 import cursosRepository from "../repository/cursos.repository.js";
 
 async function createCursosService(novoCurso) {
-    const {nome, valor, tipo} = novoCurso || {}; 
+    const {nome, area, nivel, modalidade} = novoCurso || {}; 
 
-    if(!nome || valor === undefined || !tipo) {
-        const erro = new Error("nome, valor e tipo sao obrigatorios");
+    if(!nome || !area || !nivel || !modalidade) {
+        const erro = new Error("nome, area, nivel e modalidade sao obrigatorios");
         erro.status = 400;
         throw erro;
     }
 
-    if(typeof valor !== "number") {
-        const erro = new Error("valor deve ser um numero");
+    if(typeof area !== "string") {
+        const erro = new Error("area deve ser uma string");
         erro.status = 400;
         throw erro;
     }
 
     return await cursosRepository.CreateCursosRepository(novoCurso);
 }
-export default { createCursosService };
+
+async function readAllcursosService() {
+    return await cursosRepository.readAllcursosRepository();
+}
+export default { createCursosService, readAllcursosService };

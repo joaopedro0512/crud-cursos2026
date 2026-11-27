@@ -10,6 +10,16 @@ async function createCursosController(req, res) {
     }  
 }
 
+async function readAllcursosController(req, res) {
+    try {
+        const cursos = await cursosService.readAllcursosService();
+        res.status(200).json(cursos);
+    } catch (error) {
+        res.status(error.status || 500).json({ error: error.message });
+    }
+}
+
 export default {
     createCursosController,
+    readAllcursosController
 };
