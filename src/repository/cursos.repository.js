@@ -2,7 +2,7 @@ import db from "../config/database.js";
 
 db.run(`
     CREATE TABLE IF NOT EXISTS cursos (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_cursos INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL UNIQUE,
         area REAL NOT NULL,
         nivel TEXT NOT NULL,
