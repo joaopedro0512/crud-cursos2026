@@ -4,7 +4,7 @@ db.run(`
     CREATE TABLE IF NOT EXISTS cursos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL UNIQUE,
-        area REAL NOT NULL,
+        area  TEXT NOT NULL,
         nivel TEXT NOT NULL,
         modalidade TEXT NOT NULL
         )
